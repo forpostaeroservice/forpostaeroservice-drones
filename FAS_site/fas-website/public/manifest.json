@@ -1,0 +1,21 @@
+{
+  "short_name": "Forpost Aero",
+  "name": "Forpost Aero Service — UAV & Aviation Solutions, Kazakhstan",
+  "description": "Aviation and UAV solutions for Kazakhstan. Drones, maintenance, pilot training, and consulting in Almaty.",
+  "icons": [
+    {
+      "src": "ForpostLogo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "ForpostLogo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}
