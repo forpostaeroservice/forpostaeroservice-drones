@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const SITE_URL = process.env.REACT_APP_SITE_URL || 'https://forpostaeroservice.com';
+const SITE_URL = process.env.REACT_APP_SITE_URL || 'https://www.forpostaeroservice.com';
 const DEFAULT_IMAGE = `${SITE_URL}/ForpostLogo.jpg`;
 
 /**
