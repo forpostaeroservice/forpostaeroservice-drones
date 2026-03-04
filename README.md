@@ -1,5 +1,5 @@
 # ForpostAeroService_Website
-
+.
 Frontend-only corporate website for modern robotics company.
 
 ## Tech stack
