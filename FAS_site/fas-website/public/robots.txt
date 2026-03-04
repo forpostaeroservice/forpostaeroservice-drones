@@ -1,6 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Disallow: /static/
 
-Sitemap: https://forpostaeroservice.kz/sitemap.xml
+Sitemap: https://forpostaeroservice.com/sitemap.xml
