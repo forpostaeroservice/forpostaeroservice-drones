@@ -51,8 +51,8 @@ export default function Header() {
             className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors text-zinc-900 dark:text-white"
           >
             {isDarkMode ? 
-            <img src="/moonImg.png" className="h-8 w-auto md:h-5 shrink-0 rounded-sm filter grayscale invert brightness-200"/> : 
-            <img src="/sunImg.png" className="h-8 w-auto md:h-5 shrink-0 rounded-sm"/>}
+            <img src="/moonImg.png" className="h-8 w-auto md:h-5 shrink-0 rounded-sm filter grayscale invert brightness-200 " alt="Moon Icon"/> : 
+            <img src="/sunImg.png" className="h-8 w-auto md:h-5 shrink-0 rounded-sm" alt="Sun Icon"/>}
           </button>
 
           <div className="flex gap-3 text-[10px] font-bold">

@@ -51,7 +51,7 @@ function FeatureGrid({ items }) {
 
 function AnchorTabs({ tabs, activeId }) {
   return (
-    <div className="sticky top-[64px] z-30 -mx-6 md:-mx-10 px-6 md:px-10 backdrop-blur-xl bg-white/90 dark:bg-zinc-950/80 border-b border-zinc-200/70 dark:border-white/10">
+    <div className="sticky top-[64px] z-30 -mx-6 md:-mx-10 px-6 md:px-10 backdrop-blur-xl  bg-white/70 dark:bg-black/70 backdrop-blur-md border-b border-zinc-200 dark:border-white/10">
       <div className="flex justify-start md:justify-center max-w-7xl mx-auto">
         <div className="flex items-center gap-6 md:gap-8 overflow-x-auto no-scrollbar py-4 scroll-smooth">
           {tabs.map((tab) => (
@@ -88,7 +88,7 @@ export default function DroneDetail() {
       { id: "overview", label: t("drones_detail.tabs.overview") },
       { id: "specs", label: t("drones_detail.tabs.specs") },
       { id: "video", label: t("drones_detail.tabs.video") },
-      { id: "download", label: t("drones_detail.tabs.download") },
+      // { id: "download", label: t("drones_detail.tabs.download") },
       { id: "faq", label: t("drones_detail.tabs.faq") },
     ],
     [t]
@@ -191,8 +191,10 @@ export default function DroneDetail() {
             </div>
           </div>
         </section>
-
-        <AnchorTabs tabs={tabs} activeId={activeSection} />
+        
+        <div className="sticky z-40" style={{ top: 88 }}>
+          <AnchorTabs tabs={tabs} activeId={activeSection}/>
+        </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           
@@ -200,9 +202,6 @@ export default function DroneDetail() {
           <section id="overview" className="scroll-mt-32 pt-14">
             <div className="grid lg:grid-cols-12 gap-8 md:gap-10">
               <div className="lg:col-span-7">
-                <div className="text-[10px] md:text-[11px] font-black uppercase tracking-widest text-zinc-400">
-                  {t("drones_detail.tabs.overview")}
-                </div>
                 <h2 className="mt-2 text-xl md:text-3xl font-black uppercase">{t("drones_detail.sections.overview_title")}</h2>
                 <p className="mt-4 text-zinc-600 dark:text-zinc-300 leading-relaxed text-base md:text-lg">{descriptionText}</p>
                 <FeatureGrid items={highlightsText} />
@@ -229,7 +228,7 @@ export default function DroneDetail() {
             <div className="absolute inset-0 bg-cover bg-center" style={drone.image ? { backgroundImage: `url(${drone.image})` } : undefined} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
             <div className="relative w-full px-6 py-12 md:py-20 text-center">
-              <div className="text-[10px] font-black tracking-[0.3em] uppercase text-white/70">
+              <div className="text-[10px] font-black tracking-[0.4em] uppercase text-white">
                 {t("drones_detail.performance_title")}
               </div>
               <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4">
@@ -245,9 +244,6 @@ export default function DroneDetail() {
 
           {/* Specs Table - Optimized for Mobile Reading */}
           <section id="specs" className="scroll-mt-32 pt-16 md:pt-20">
-            <div className="text-[10px] md:text-[11px] font-black uppercase tracking-widest text-zinc-400">
-              {t("drones_detail.tabs.specs")}
-            </div>
             <h2 className="mt-2 text-xl md:text-3xl font-black uppercase">{t("drones_detail.specs")}</h2>
 
             <div className="mt-8 rounded-[22px] md:rounded-[28px] overflow-hidden border border-zinc-200/70 dark:border-white/10 bg-white dark:bg-white/5">
@@ -268,13 +264,10 @@ export default function DroneDetail() {
 
           {/* Video Section */}
           <section id="video" className="scroll-mt-32 pt-16 md:pt-20">
-             <div className="text-[10px] md:text-[11px] font-black uppercase tracking-widest text-zinc-400">
-               {t("drones_detail.tabs.video")}
-             </div>
-             <h2 className="mt-2 text-xl md:text-3xl font-black uppercase">{t("drones_detail.sections.video_title")}</h2>
+             <h2 className="mt-2 text-xl md:text-3xl font-black uppercase text-center">{t("drones_detail.sections.video_title")}</h2>
              
-             <div className="mt-8 grid lg:grid-cols-12 gap-6">
-                <div className="lg:col-span-8 overflow-hidden rounded-[22px] md:rounded-[28px] border border-zinc-200/70 dark:border-white/10 aspect-video bg-black shadow-xl">
+             <div className="flex flex-col items-center mt-8">
+                <div className="w-full max-w-[1000px] overflow-hidden rounded-[22px] md:rounded-[28px] border border-zinc-200/70 dark:border-white/10 aspect-video bg-black shadow-xl">
                   {drone.youtubeId ? (
                     <iframe
                       className="w-full h-full"
@@ -288,20 +281,16 @@ export default function DroneDetail() {
                     </div>
                   )}
                 </div>
-                <div className="lg:col-span-4 rounded-[22px] md:rounded-[28px] border border-zinc-200/70 dark:border-white/10 bg-white dark:bg-white/5 p-8 flex flex-col justify-between">
-                   <p className="text-zinc-500 text-xs leading-relaxed italic">
-                     {t("drones_detail.video_sidebar_text")}
-                   </p>
-                   <Link to="/contact" className="mt-6 block text-center py-4 rounded-xl bg-blue-600 text-white font-black uppercase text-[10px] tracking-widest">
-                      {t("drones_detail.contact_us")}
-                   </Link>
-                </div>
-             </div>
+                <Link to="/contact" className="mt-6 block w-full md:w-[1000px] text-center py-5 rounded-xl bg-blue-600 text-white font-black uppercase text-[12px] tracking-widest">
+                  {t("drones_detail.contact_us")}
+                </Link>
+             </div>                
+                
           </section>
 
           {/* FAQ Section */}
           <section id="faq" className="scroll-mt-32 pt-16 md:pt-20 pb-10">
-            <div className="text-[10px] font-black uppercase tracking-widest text-zinc-400">{t("drones_detail.tabs.faq")}</div>
+            {/* <div className="text-[10px] font-black uppercase tracking-widest text-zinc-400">{t("drones_detail.tabs.faq")}</div> */}
             <h2 className="mt-2 text-xl md:text-3xl font-black uppercase">{t("drones_detail.sections.faq_title")}</h2>
             <div className="mt-8 grid lg:grid-cols-2 gap-4">
               {["q1", "q2", "q3", "q4"].map((k) => (
