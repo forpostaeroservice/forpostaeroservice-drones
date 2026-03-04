@@ -128,11 +128,11 @@ export default function EcosystemDetail() {
   const descriptionText = product.descKey
     ? t(product.descKey)
     : product.description;
-  const specs = Array.isArray(product.specs) ? product.specs : [];
-  const topSpecs = specs.slice(0, 4);
-  const highlightsText = Array.isArray(product.highlights)
-    ? product.highlights
-    : [];
+  const specs = (product.specsKey && t(product.specsKey, { returnObjects: true })) || [];
+  const specsList = Array.isArray(specs) ? specs : [];
+  const topSpecs = specsList.slice(0, 4);
+  const highlightsRaw = product.highlightsKey ? t(product.highlightsKey, { returnObjects: true }) : [];
+  const highlightsText = Array.isArray(highlightsRaw) ? highlightsRaw : [];
 
   return (
     <PageTransition>
@@ -169,7 +169,7 @@ export default function EcosystemDetail() {
             <div className="mt-8 md:mt-12 grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
               <div className="order-2 lg:order-1">
                 <div className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.3em] text-zinc-500">
-                  Экосистема
+                  {t("drones_detail.ecosystem_label")}
                 </div>
                 <h1 className="mt-3 text-[30px] md:text-[56px] leading-[1.15] md:leading-[1.02] font-black uppercase tracking-tight md:tracking-[-0.04em]">
                   {name}
@@ -296,7 +296,7 @@ export default function EcosystemDetail() {
 
             <div className="mt-8 rounded-[22px] md:rounded-[28px] overflow-hidden border border-zinc-200/70 dark:border-white/10 bg-white dark:bg-white/5">
               <div className="divide-y divide-zinc-200/70 dark:divide-white/10">
-                {specs.map((row, idx) => (
+                {specsList.map((row, idx) => (
                   <div
                     key={idx}
                     className="flex flex-col md:grid md:grid-cols-12 gap-1 md:gap-4 px-6 md:px-7 py-5 md:py-6"
