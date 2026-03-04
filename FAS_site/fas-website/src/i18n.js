@@ -74,6 +74,9 @@ const resources = {
         view: "View",
         cat_evtol: { name: "eVTOL", specs: "Efficiency and Multitasking" },
         cat_multirotor: { name: "Multi-rotor", specs: "Lightweight and Portable" },
+        cat_fpv: { name: "FPV Solutions", specs: "Goggles, controllers, and training kits" },
+        cat_ecosystems: { name: "Ecosystems", specs: "Ground stations, payloads, and software" },
+        cat_lab: { name: "Training Lab Complex", specs: "Turnkey FPV and UAV training space" },
         solutions: "FPV Solutions",
         solutions_desc: "FPV drones of any class and size to suit the customer's specific technical needs",
         solutions_title: "TRAINING MICRO-DRONE - BETAFPV AIR65 (FREESTYLE, BETAFPV CETUS) KIT PRO",
@@ -103,6 +106,50 @@ const resources = {
           "work with autonomous and monitoring systems;",
           "development of engineering, technical, and research skills."
         ]
+      },
+      fpv_catalog: {
+        "7in_quad": {
+          name: "7-inch quadcopter",
+          desc: "Lightweight and fast FPV quad for missions where maneuverability and top speed matter.",
+        },
+        "10in_quad": {
+          name: "10-inch quadcopter",
+          desc: "FPV platform with 10-inch props for increased payload and flight time.",
+        },
+        x8_transporter: {
+          name: "Custom 8-rotor transporter",
+          desc: "Powerful X8 platform for transporting heavy payloads with redundancy and stability.",
+        },
+        "13in_traverser": {
+          name: "13-inch 4-rotor traverser",
+          desc: "Large-format 13-inch quadcopter for maximum payload and hover endurance.",
+        },
+        "10in_fiber": {
+          name: "10-inch fiber-optic quadcopter",
+          desc: "Specialized platform with fiber-optic control and video link for secure missions.",
+        },
+      },
+      ecosystem_catalog: {
+        dragonfish_nest: {
+          name: "Autel Dragonfish Nest",
+          desc: "Autonomous remote operations station for Dragonfish drones with auto takeoff, landing, and power swap.",
+        },
+        dragonfish_repeater: {
+          name: "Dragonfish Repeater",
+          desc: "Repeater system that extends communication range and builds a mesh network for Dragonfish and Nests.",
+        },
+        asat: {
+          name: "Autel Smart Antenna Transmission (ASAT)",
+          desc: "Portable antenna base station that extends range up to 28 miles with high interference resistance.",
+        },
+        smart_controller_v3: {
+          name: "Autel Smart Controller V3",
+          desc: "Professional ground controller with 7.9\" 2000-nit screen, long-range link and 4h battery life.",
+        },
+        smart_controller_v2: {
+          name: "Autel Smart Controller V2",
+          desc: "Previous-generation smart controller with ultra-bright display and long-range HD transmission.",
+        },
       },
       drones_category: {
         back: "Back",
@@ -622,6 +669,9 @@ const resources = {
         view: "Обзор",
         cat_evtol: { name: "Самолетного типа", specs: "Эффективность и мультизадачность" },
         cat_multirotor: { name: "Мультироторные", specs: "Легкость и портативность" },
+        cat_fpv: { name: "FPV-решения", specs: "Очки, пульты и тренировочные комплекты" },
+        cat_ecosystems: { name: "Экосистемы", specs: "Наземные станции, полезная нагрузка, ПО" },
+        cat_lab: { name: "Учебно-лабораторный комплекс", specs: "Готовая среда для обучения FPV и БПЛА" },
         solutions: "FPV Решения",
         solutions_desc: "FPV-дроны любого класса и размера под конкретные технические задачи заказчика",
         solutions_title: "УЧЕБНЫЙ МИКРО-ДРОН - BETAFPV AIR65 (FREESTYLE, BETAFPV CETUS) KIT PRO",
@@ -651,6 +701,50 @@ const resources = {
           "работа с автономными и мониторинговыми системами;",
           "развитие инженерных, технических и исследовательских навыков."
         ]
+      },
+      fpv_catalog: {
+        "7in_quad": {
+          name: "Квадрокоптер с 7-дюймовыми роторами",
+          desc: "Лёгкий и быстрый FPV-квадрокоптер с 7-дюймовыми роторами для задач, где важны манёвренность и высокая скорость.",
+        },
+        "10in_quad": {
+          name: "Квадрокоптер с 10-дюймовыми роторами",
+          desc: "FPV-платформа с 10-дюймовыми роторами для задач с увеличенной нагрузкой и временем полёта.",
+        },
+        x8_transporter: {
+          name: "Пользовательский 8-роторный транспортник",
+          desc: "Мощная X8-платформа для транспортировки тяжёлых грузов с высокой устойчивостью и резервированием.",
+        },
+        "13in_traverser": {
+          name: "13-дюймовый 4-роторный траверсер",
+          desc: "Крупный 13-дюймовый квадрокоптер для операций с максимально высокой нагрузкой и длительным зависанием.",
+        },
+        "10in_fiber": {
+          name: "10-дюймовый квадрокоптер с оптоволоконным управлением",
+          desc: "Специализированный квадрокоптер с управлением и видеоканалом по оптоволоконной линии для защищённых миссий.",
+        },
+      },
+      ecosystem_catalog: {
+        dragonfish_nest: {
+          name: "Autel Dragonfish Nest",
+          desc: "Автоматизированная станция удалённых операций для дронов Dragonfish с авто взлётом, посадкой и заменой питания.",
+        },
+        dragonfish_repeater: {
+          name: "Dragonfish Repeater",
+          desc: "Ретранслятор, увеличивающий дальность связи и формирующий сеть для систем Dragonfish и Nest.",
+        },
+        asat: {
+          name: "Autel Smart Antenna Transmission (ASAT)",
+          desc: "Переносная антенная станция, увеличивающая дальность связи до 28 миль и устойчивость к помехам.",
+        },
+        smart_controller_v3: {
+          name: "Autel Smart Controller V3",
+          desc: "Профессиональный пульт управления с 7.9\" дисплеем 2000 нит, дальностью до 15 км и временем работы до 4 часов.",
+        },
+        smart_controller_v2: {
+          name: "Autel Smart Controller V2",
+          desc: "Пульт предыдущего поколения с сверхярким экраном и дальнобойной HD-передачей видео.",
+        },
       },
       
       drones_category: {
@@ -1246,6 +1340,9 @@ const resources = {
         view: "Көру",
         cat_evtol: { name: "Ұшақ түрі", specs: "Тиімді және тұрақты" },
         cat_multirotor: { name: "Мультироторлы", specs: "Жеңіл және тасымалды" },
+        cat_fpv: { name: "FPV шешімдері", specs: "Көзілдіріктер, пульттер және жаттығу жинақтары" },
+        cat_ecosystems: { name: "Экожүйелер", specs: "Жергілікті станциялар, пайдалы жүктеме, БЖ" },
+        cat_lab: { name: "Оқу-зертхана кешені", specs: "FPV және БҰҚ оқытуға арналған дайын орта" },
         solutions: "FPV шешімдері",
         solutions_desc: "Тұтынушының нақты техникалық қажеттіліктеріне сәйкес келетін кез келген сыныптағы және өлшемдегі FPV дрондары",
         solutions_title: "ОҚУ МИКРО-ДРОНЫ - BETAFPV AIR65 (FREESTYLE, BETAFPV CETUS) KIT PRO",

@@ -5,6 +5,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Drones from "./pages/Drones.jsx";
+import FpvCatalog from "./pages/FpvCatalog.jsx";
+import Ecosystems from "./pages/Ecosystems.jsx";
+import LabComplex from "./pages/LabComplex.jsx";
+import FpvDetail from "./pages/FpvDetail.jsx";
+import EcosystemDetail from "./pages/EcosystemDetail.jsx";
 import DroneCategory from "./pages/DroneCategory";
 import DroneDetail from "./pages/DroneDetail";
 import Service from "./pages/Service";
@@ -31,6 +36,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/drones" element={<Drones />} />
+            <Route path="/products/fpv" element={<FpvCatalog />} />
+            <Route path="/products/fpv/:fpvSlug" element={<FpvDetail />} />
+            <Route path="/products/ecosystems" element={<Ecosystems />} />
+            <Route path="/products/ecosystems/:ecosystemSlug" element={<EcosystemDetail />} />
+            <Route path="/products/lab" element={<LabComplex />} />
             <Route path="/drones/:categorySlug" element={<DroneCategory />} />
             <Route path="/drones/:categorySlug/:droneSlug" element={<DroneDetail />} />
             <Route path="/service" element={<Service />} />
