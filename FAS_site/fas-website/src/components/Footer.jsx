@@ -23,10 +23,19 @@ export default function Footer() {
           <h4 className="text-zinc-900 dark:text-white font-bold mb-6">{t('footer.col_products')}</h4>
           <ul className="text-zinc-600 dark:text-zinc-500 text-sm space-y-4">
             <li>
-              <Link to="/drones" className="hover:text-blue-600 dark:hover:text-white transition">EVTOL</Link>
+              <Link to="/drones/evtol" className="hover:text-blue-600 dark:hover:text-white transition">EVTOL</Link>
             </li>
             <li>
-              <Link to="/drones" className="hover:text-blue-600 dark:hover:text-white transition">Multi-Rotor</Link>
+              <Link to="/drones/multirotor" className="hover:text-blue-600 dark:hover:text-white transition">Multi-Rotor</Link>
+            </li>
+            <li>
+              <Link to="/products/fpv" className="hover:text-blue-600 dark:hover:text-white transition">FPV</Link>
+            </li>
+            <li>
+              <Link to="/ecosystems" className="hover:text-blue-600 dark:hover:text-white transition">Ecosystems</Link>
+            </li>
+            <li>
+              <Link to="/products/lab" className="hover:text-blue-600 dark:hover:text-white transition">Laboratory</Link>
             </li>
           </ul>
         </div>
