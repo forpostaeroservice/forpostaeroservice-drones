@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background Image/Video */}
       <div className="absolute inset-0 opacity-60">
          <img 
-           src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=2000" 
+           src="/Main.png" 
            className="w-full h-full object-cover" 
            alt="Drone flying" 
          />
