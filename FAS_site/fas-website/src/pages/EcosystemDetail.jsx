@@ -51,7 +51,7 @@ function FeatureGrid({ items }) {
 
 function AnchorTabs({ tabs, activeId }) {
   return (
-    <div className="sticky z-30 -mx-6 md:-mx-10 px-6 md:px-10 backdrop-blur-xl bg-white/70 dark:bg-black/70 backdrop-blur-md border-b border-zinc-200 dark:border-white/10">
+    <div className="sticky z-30 -mx-6 md:-mx-10 px-6 md:px-10 backdrop-blur-xl bg-white/40 dark:bg-black/40 backdrop-blur-md border-b border-zinc-200 dark:border-white/10">
       <div className="flex justify-start md:justify-center max-w-7xl mx-auto">
         <div className="flex items-center gap-6 md:gap-8 overflow-x-auto no-scrollbar py-4 scroll-smooth">
           {tabs.map((tab) => (
@@ -88,8 +88,8 @@ export default function EcosystemDetail() {
   const tabs = useMemo(
     () => [
       { id: "overview", label: t("drones_detail.tabs.overview") },
-      { id: "video", label: t("drones_detail.tabs.video") },
       { id: "specs", label: t("drones_detail.tabs.specs") },
+      { id: "video", label: t("drones_detail.tabs.video") },
     ],
     [t]
   );
@@ -179,10 +179,7 @@ export default function EcosystemDetail() {
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Link
-                    to="/contact"
-                    className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-black uppercase text-[11px] tracking-widest"
-                  >
+                  <Link to="/contact" className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-blue-600 text-white font-black uppercase text-[11px] tracking-widest">
                     {t("drones_detail.contact_us")}
                   </Link>
                 </div>
@@ -255,6 +252,34 @@ export default function EcosystemDetail() {
             </div>
           </section>
 
+          {/* Specs */}
+          <section id="specs" className="scroll-mt-32 pt-16 md:pt-20">
+            <div className="text-[10px] md:text-[11px] font-black uppercase tracking-widest text-zinc-400">
+              {t("drones_detail.tabs.specs")}
+            </div>
+            <h2 className="mt-2 text-xl md:text-3xl font-black uppercase">
+              {t("drones_detail.specs")}
+            </h2>
+
+            <div className="mt-8 rounded-[22px] md:rounded-[28px] overflow-hidden border border-zinc-200/70 dark:border-white/10 bg-white dark:bg-white/5">
+              <div className="divide-y divide-zinc-200/70 dark:divide-white/10">
+                {specsList.map((row, idx) => (
+                  <div
+                    key={idx}
+                    className="flex flex-col md:grid md:grid-cols-12 gap-1 md:gap-4 px-6 md:px-7 py-5 md:py-6"
+                  >
+                    <div className="md:col-span-4 text-zinc-400 dark:text-zinc-500 font-black uppercase tracking-wider text-[9px] md:text-[11px]">
+                      {row.label}
+                    </div>
+                    <div className="md:col-span-8 text-zinc-900 dark:text-white text-sm md:text-base font-medium">
+                      {row.value}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* Video Section — как у дронов: заголовок по центру, видео, кнопка под ним */}
           <section id="video" className="scroll-mt-32 pt-16 md:pt-20">
             <h2 className="mt-2 text-xl md:text-3xl font-black uppercase text-center">
@@ -282,34 +307,6 @@ export default function EcosystemDetail() {
               >
                 {t("drones_detail.contact_us")}
               </Link>
-            </div>
-          </section>
-
-          {/* Specs */}
-          <section id="specs" className="scroll-mt-32 pt-16 md:pt-20">
-            <div className="text-[10px] md:text-[11px] font-black uppercase tracking-widest text-zinc-400">
-              {t("drones_detail.tabs.specs")}
-            </div>
-            <h2 className="mt-2 text-xl md:text-3xl font-black uppercase">
-              {t("drones_detail.specs")}
-            </h2>
-
-            <div className="mt-8 rounded-[22px] md:rounded-[28px] overflow-hidden border border-zinc-200/70 dark:border-white/10 bg-white dark:bg-white/5">
-              <div className="divide-y divide-zinc-200/70 dark:divide-white/10">
-                {specsList.map((row, idx) => (
-                  <div
-                    key={idx}
-                    className="flex flex-col md:grid md:grid-cols-12 gap-1 md:gap-4 px-6 md:px-7 py-5 md:py-6"
-                  >
-                    <div className="md:col-span-4 text-zinc-400 dark:text-zinc-500 font-black uppercase tracking-wider text-[9px] md:text-[11px]">
-                      {row.label}
-                    </div>
-                    <div className="md:col-span-8 text-zinc-900 dark:text-white text-sm md:text-base font-medium">
-                      {row.value}
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </section>
         </div>

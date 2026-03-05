@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import PageTransition from "../components/PageTransition";
 import SEO from "../components/SEO";
 
@@ -115,6 +116,11 @@ export default function Education() {
               </div>
             </div>
           </motion.div>
+
+          <Link to="/contact" className="mt-6 block w-full md:w-[1000px] mx-auto text-center py-5 rounded-xl bg-blue-600 text-white font-black uppercase text-[12px] tracking-widest">
+            {t("drones_detail.contact_us")}
+          </Link>
+
         </div>
       </div> 
     </PageTransition>

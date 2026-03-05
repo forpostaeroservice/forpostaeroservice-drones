@@ -51,7 +51,7 @@ function FeatureGrid({ items }) {
 
 function AnchorTabs({ tabs, activeId }) {
   return (
-    <div className="sticky top-[64px] z-30 -mx-6 md:-mx-10 px-6 md:px-10 backdrop-blur-xl  bg-white/70 dark:bg-black/70 backdrop-blur-md border-b border-zinc-200 dark:border-white/10">
+    <div className="sticky top-[64px] z-30 -mx-6 md:-mx-10 px-6 md:px-10 backdrop-blur-xl  bg-white/40 dark:bg-black/40 backdrop-blur-md border-b border-zinc-200 dark:border-white/10">
       <div className="flex justify-start md:justify-center max-w-7xl mx-auto">
         <div className="flex items-center gap-6 md:gap-8 overflow-x-auto no-scrollbar py-4 scroll-smooth">
           {tabs.map((tab) => (
@@ -162,7 +162,7 @@ export default function DroneDetail() {
 
                 {/* Hero Action Button */}
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Link to="/contact" className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-black uppercase text-[11px] tracking-widest">
+                  <Link to="/contact" className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-blue-600 text-white font-black uppercase text-[11px] tracking-widest">
                     {t("drones_detail.contact_us")}
                   </Link>
                 </div>

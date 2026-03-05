@@ -9,7 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 py-1 transition-all duration-300 bg-white/70 dark:bg-black/70 backdrop-blur-md border-b border-zinc-200 dark:border-white/10"> 
+    <nav className="fixed top-0 w-full z-50 py-1 transition-all duration-300 bg-white/40 dark:bg-black/40 backdrop-blur-md border-b border-zinc-200 dark:border-white/10"> 
 
       <div className="flex items-center justify-between px-6 py-4 md:px-10 md:py-5">
         
@@ -28,7 +28,7 @@ export default function Header() {
         </div>
 
         {/* Center Section: Desktop Menu */}
-        <ul className="hidden lg:flex gap-10 text-sm font-medium uppercase tracking-[0.2em] text-zinc-600 dark:text-zinc-300">
+        <ul className="hidden lg:flex gap-10 text-sm font-medium uppercase tracking-[0.2em] text-black dark:text-white">
           <li className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"> 
             <Link to="/drones">{t('nav.drones')}</Link>
           </li>

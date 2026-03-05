@@ -5,11 +5,11 @@ import PageTransition from "../components/PageTransition";
 import SEO from '../components/SEO';
 
 const droneCategories = [
-  { id: 1, key: "cat_evtol", to: "/drones/evtol", img: "EVTOL.png" },
-  { id: 2, key: "cat_multirotor", to: "/drones/multirotor", img: "Multi-rotor.jpg" },
-  { id: 3, key: "cat_fpv", to: "/products/fpv", img: "EVTOL.png" },
-  { id: 4, key: "cat_ecosystems", to: "/products/ecosystems", img: "Multi-rotor.jpg" },
-  { id: 5, key: "cat_lab", to: "/products/lab", img: "Lab1.png" },
+  { id: 1, key: "cat_evtol", to: "/drones/evtol", img: "/EVTOL.png" },
+  { id: 2, key: "cat_multirotor", to: "/drones/multirotor", img: "/Multi-rotor.png" },
+  { id: 3, key: "cat_fpv", to: "/products/fpv", img: "/FPVSolutions.png" },
+  { id: 4, key: "cat_ecosystems", to: "/products/ecosystems", img: "/Ecosystems.png" },
+  { id: 5, key: "cat_lab", to: "/products/lab", img: "/LabMain.png" },
 ];
 
 export default function Drones() {

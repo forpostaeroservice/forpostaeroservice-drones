@@ -11,7 +11,7 @@ export const FPV_PRODUCTS_DATA = [
     specsKey: "fpv_catalog.7in_quad.specs",
     highlightsKey: "fpv_catalog.7in_quad.highlights",
     shortLabel: "7\" квадрокоптер",
-    image: "/fpv/7inch.png",
+    image: "/fpv_images/FPV7inch.png",
     youtubeId: "",
   },
   {

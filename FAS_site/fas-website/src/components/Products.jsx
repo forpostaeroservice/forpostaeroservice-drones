@@ -20,31 +20,35 @@ export default function Products() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((p) => (
             <div key={p.id} className="group cursor-pointer">
-              {/* Product Image Container */}
-              <Link to="/drones">
-                <div className="relative aspect-square overflow-hidden bg-zinc-100 dark:bg-zinc-900 rounded-sm">
-                  <img 
-                    src={p.image} 
-                    alt={t(`products.${p.key}.name`)} 
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 opacity-90 dark:opacity-80 group-hover:opacity-100" 
-                  />
-                </div>
-              </Link>
-
-              {/* Product Text Details */}
-              <div className="mt-6">
-                <h3 className="text-zinc-900 dark:text-white text-xl font-bold transition-colors">
-                  {t(`products.${p.key}.name`)}
-                </h3>
-                <p className="text-zinc-500 dark:text-zinc-400 text-sm mt-1 transition-colors">
-                  {t(`products.${p.key}.tagline`)}
-                </p>
-                <Link 
-                  to="/drones" 
-                  className="inline-block mt-4 text-blue-700 dark:text-blue-800 text-xs font-bold uppercase tracking-widest border-b border-transparent hover:border-blue-700 dark:hover:border-blue-800 transition-all"
-                >
-                  {t('products.learn_more')}
+              {/* 1. Added rounded-3xl and overflow-hidden to the main card */}
+              <div className='overflow-hidden rounded-[2rem] bg-zinc-100 dark:bg-zinc-900/50 flex flex-col h-full'>
+                
+                <Link to="/drones">
+                  {/* 2. Removed rounded-sm and changed aspect ratio to match your reference */}
+                  <div className="relative aspect-[4/5] overflow-hidden p-8">
+                    <img 
+                      src={p.image} 
+                      alt={t(`products.${p.key}.name`)} 
+                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" 
+                    />
+                  </div>
                 </Link>
+
+                {/* 3. Added padding to the text area so it isn't touching the edges */}
+                <div className="p-8 pt-0 mt-auto">
+                  <h3 className="text-zinc-900 dark:text-white text-2xl font-black uppercase tracking-tight">
+                    {t(`products.${p.key}.name`)}
+                  </h3>
+                  <p className="text-zinc-500 dark:text-zinc-400 text-sm mt-2 font-medium leading-relaxed">
+                    {t(`products.${p.key}.tagline`)}
+                  </p>
+                  <Link 
+                    to="/drones" 
+                    className="inline-block mt-6 text-blue-600 dark:text-blue-500 text-xs font-black uppercase tracking-[0.2em] hover:text-blue-800 transition-colors"
+                  >
+                    {t('products.learn_more')}
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
