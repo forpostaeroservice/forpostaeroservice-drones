@@ -25,11 +25,8 @@ export default function Hero() {
           {t('hero.desc')}
         </p>
         <div className="flex gap-4 justify-center">
-          <button className="bg-white text-black px-8 py-3 font-bold hover:bg-zinc-200 transition uppercase text-sm tracking-widest">
+          <button className="bg-white text-black px-8 py-3  rounded-2xl font-bold hover:bg-zinc-200 transition uppercase text-sm tracking-widest">
             <Link to="/drones">{t('hero.btn_explore')}</Link>
-          </button>
-          <button className="border border-white text-white px-8 py-3 font-bold hover:bg-white/10 transition uppercase text-sm tracking-widest">
-            {t('hero.btn_video')}
           </button>
         </div>
       </div>
