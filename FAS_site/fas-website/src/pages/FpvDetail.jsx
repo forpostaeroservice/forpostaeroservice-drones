@@ -85,8 +85,8 @@ export default function FpvDetail() {
   const tabs = useMemo(
     () => [
       { id: "overview", label: t("drones_detail.tabs.overview") },
-      { id: "video", label: t("drones_detail.tabs.video") },
       { id: "specs", label: t("drones_detail.tabs.specs") },
+      { id: "video", label: t("drones_detail.tabs.video") },
     ],
     [t]
   );
@@ -201,7 +201,7 @@ export default function FpvDetail() {
               </div>
 
               <div className="relative order-1 lg:order-2">
-                <FpvMedia image={product.image} label={shortLabel} />
+                <FpvMedia image={product.image} label={shortLabel}/>
               </div>
             </div>
           </div>

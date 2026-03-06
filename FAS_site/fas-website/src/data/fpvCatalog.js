@@ -23,7 +23,7 @@ export const FPV_PRODUCTS_DATA = [
     specsKey: "fpv_catalog.10in_quad.specs",
     highlightsKey: "fpv_catalog.10in_quad.highlights",
     shortLabel: "10\" квадрокоптер",
-    image: "/fpv/10inch.png",
+    image: "/fpv_images/FPV10inch.png",
     youtubeId: "",
   },
   {
@@ -35,7 +35,7 @@ export const FPV_PRODUCTS_DATA = [
     specsKey: "fpv_catalog.x8_transporter.specs",
     highlightsKey: "fpv_catalog.x8_transporter.highlights",
     shortLabel: "X8 транспортник",
-    image: "/fpv/x8.png",
+    image: "/fpv_images/FPV8rotor.png",
     youtubeId: "",
   },
   {
@@ -47,7 +47,7 @@ export const FPV_PRODUCTS_DATA = [
     specsKey: "fpv_catalog.13in_traverser.specs",
     highlightsKey: "fpv_catalog.13in_traverser.highlights",
     shortLabel: "13\" траверсер",
-    image: "/fpv/13inch.png",
+    image: "/fpv_images/FPV13inch.png",
     youtubeId: "",
   },
   {
@@ -59,7 +59,7 @@ export const FPV_PRODUCTS_DATA = [
     specsKey: "fpv_catalog.10in_fiber.specs",
     highlightsKey: "fpv_catalog.10in_fiber.highlights",
     shortLabel: "10\" оптоволоконный",
-    image: "/fpv/10inch_fiber.png",
+    image: "/fpv_images/FPV10inch.png",
     youtubeId: "",
   },
 ];

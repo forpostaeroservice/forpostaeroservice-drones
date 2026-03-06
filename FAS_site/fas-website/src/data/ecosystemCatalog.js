@@ -12,7 +12,7 @@ export const ECOSYSTEM_PRODUCTS_DATA = [
     highlightsKey: "ecosystem_catalog.dragonfish_nest.highlights",
     shortLabel: "Dragonfish Nest",
     image: "/ecosystem/AutelNest.png",
-    youtubeId: "",
+    youtubeId: "PFxSI2Kq1dH7G",
   },
   {
     slug: "dragonfish-repeater",
@@ -36,7 +36,7 @@ export const ECOSYSTEM_PRODUCTS_DATA = [
     highlightsKey: "ecosystem_catalog.asat.highlights",
     shortLabel: "ASAT",
     image: "/ecosystem/SmartAntenna.png",
-    youtubeId: "",
+    youtubeId: "0X69ynZGO1s",
   },
   {
     slug: "smart-controller-v3",
