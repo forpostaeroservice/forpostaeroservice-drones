@@ -789,6 +789,7 @@ const resources = {
       contact: {
         title: "Contact",
         us: "Us",
+        slogan: "Ready to elevate your operations with Forpost Aero Service.",
         hq: "Address",
         address: "Almaty, Kazakhstan",
         street: "28 Ryskulbekova Street",
@@ -1582,6 +1583,7 @@ const resources = {
       contact: {
         title: "Свяжитесь",
         us: "с нами",
+        slogan: "Повысьте качество вашей работы с Forpost Aero Service.",
         hq: "Адрес",
         address: "Алматы, Казахстан",
         street: "ул. Рыскулбекова 28",
@@ -2352,6 +2354,7 @@ const resources = {
       contact: {
         title: "Бізбен",
         us: "байланысыңыз",
+        slogan: "Forpost Aero Service қызметімен жұмысыңыздың сапасын арттырыңыз.",
         hq: "Адрес",
         address: "Алматы, Казахстан",
         street: "ул. Рыскулбекова 28",

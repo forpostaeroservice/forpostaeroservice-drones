@@ -45,7 +45,7 @@ export default function Contact() {
               {t('contact.us')}
             </h1>
             <p className="text-zinc-500 dark:text-zinc-500 text-lg max-w-md uppercase tracking-widest font-medium">
-              Ready to elevate your operations with Forpost Aero Service.
+              {t('contact.slogan')}
             </p>
           </div>
 
